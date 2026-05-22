@@ -1,3 +1,4 @@
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -26,7 +27,8 @@ public class Lab1 {
         System.out.println();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введіть значення змінної Y: ");
         int Y = scanner.nextInt();

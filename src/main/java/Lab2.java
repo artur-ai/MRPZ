@@ -1,3 +1,4 @@
+import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 public class Lab2 {
@@ -18,7 +19,8 @@ public class Lab2 {
         return new String(digits);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
         Random random = new Random();
         int number = 10000 + random.nextInt(90000);
 
@@ -51,11 +53,9 @@ public class Lab2 {
         String result = new String(afterEven);
         System.out.println("Після кроку 2:        " + result);
 
-        System.out.println("\n============================================");
         System.out.println("  РЕЗУЛЬТАТ:");
         System.out.println("  Вихідне число:  " + original);
         System.out.println("  Оброблене число: " + result);
-        System.out.println("============================================");
 
         System.out.println("\n--- Перевірка на прикладі з умови: 64583 ---");
         String test = "64583";

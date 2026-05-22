@@ -1,3 +1,4 @@
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 class Train {
@@ -196,7 +197,8 @@ public class Lab3 {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new java.io.PrintStream(System.out, true, "UTF-8"));
         Scanner sc = new Scanner(System.in);
 
         System.out.println("=".repeat(75));
